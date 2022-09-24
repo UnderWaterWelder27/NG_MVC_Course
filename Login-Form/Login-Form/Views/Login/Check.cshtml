@@ -1,0 +1,13 @@
+﻿@model Login_Form.Models.UserModel
+
+@if(Model.IsLogged) {
+    @if(Model.IsAdmin) {
+        <h1>@Model.Username is Admin</h1>
+    }
+    else {
+        <h1>@Model.Username is User</h1>
+    }
+}
+else {
+    <h1>Wrong, return back to <a href="@Url.Action("Index")"> login</a></h1>
+}
